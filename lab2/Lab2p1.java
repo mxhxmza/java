@@ -35,13 +35,14 @@ public class Lab2p1{
     public static void multest(){
         int count = 0;
         for(int i = 0; i < 5; i++){
-            long a = Math.round(Math.random()*8 + 1);
-            long b = Math.round(Math.random()*8 + 1);
-            int res = Math.toIntExact(a * b);
+            int a = (int) Math.floor(Math.random()*9 + 1);
+            int b = (int) Math.floor(Math.random()*9 + 1);
+            int res = a * b;
             System.out.printf("How much is %d times %d?", a, b);
             Scanner sc = new Scanner(System.in);
             int ans = sc.nextInt();
             if (ans == res) count ++;
+            sc.close();
         }
         System.out.printf("%d answers out of 5 are correct \n", count);
     }
